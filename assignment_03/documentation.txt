@@ -1,0 +1,7 @@
+This is a document for utilizing the code for simulating chemical simulation.
+
+To generate the plot, simply type in 'doit' in the terminal or opne the 'main.py' with a script editor and run in the same directory as the rest of the file.
+
+To input the initial condition, you will have to open the 'main.py.' and change the initial value manually. The required initial value should in the begining of the code and you can also scroll down to change other varaibles such as gamma, or safety factor.
+
+The program should produce a plot in the same directory and it will a graph of number density versus time as the system evolve.

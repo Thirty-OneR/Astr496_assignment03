@@ -1,0 +1,26 @@
+This is a file for evaluating the code:
+
+Speed:
+Let's get the obvious out of the way.
+With higher max time, it takes much longer for the code to complete the simulation.
+Other input parameter factors such as number density, density fraction, does not affect the speed of the program on a\
+observable level.
+The more interesting effect is the one caused by the integrator type.
+Depending on which integrater you choose, the result will different.
+Due to time constraint, I was not able to test the code with most of the integrator and \
+and indeed I have no idea how most of them works.
+But with the ones that I have tested, I can conclude that there is an observable effect on the integration speed and percision.
+The default integrator is the most friendly one.
+It has a internal time step check where if the integration will diverge under the current time step it will\
+adjust the time step to appropriate value.
+
+Equilibrium:
+A low and high temperature, the equilibrium is achieved faster.
+However, the equilibrium is achieved much slower at medium temperature.
+
+Sadly, no interesting phase space is observed at least in my opinion.
+
+Getting through the equations are relatively easy and writing the reaction rate module is easy. 
+However, there is a lot of thing that need to be determined to change temperature and time step.
+It took some time to decide what place should I do this, in the main program or in the rhs program.
+Eventually, the desicion is made to do everthing in the rhs module for sake of easy access to information.

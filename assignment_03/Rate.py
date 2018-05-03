@@ -1,10 +1,13 @@
 import numpy as np
 
 def generate_k(T,rate=None):
+    
+    # convert the Temperature to the quantity we want
     T_eV=T/11605.
     log_T_eV=np.log(T_eV)
     log_T=np.log(T)
 
+    # this code for reminding user all the reaction that's happening
     if rate=='reaction':
         print('k1: HI + e -> HII + 2e')
         print('k2: HII + e -> HI + p')
@@ -29,6 +32,7 @@ def generate_k(T,rate=None):
     if rate==None:
     		print('You need to work with me here')
 	
+    # the following are the respective reaction rate calculation corresponding to the input string.
     if rate=='k1':
         k = np.exp(-32.71396786375
           + 13.53655609057*log_T_eV
